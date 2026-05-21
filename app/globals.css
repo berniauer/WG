@@ -1,26 +1,57 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --cream: #F5EFE6;
+  --cream-dark: #EDE8DF;
+  --cream-mid: #E2D9CE;
+  --cream-border: #C8BFB5;
+  --stone: #1C1917;
+  --stone-mid: #57534E;
+  --stone-light: #A8A29E;
+  --amber: #B45309;
+  --amber-light: #D97706;
+  --amber-pale: #FDE68A;
+  --sage: #4A7C6B;
+  --sage-light: #D1E8D7;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-cream: var(--cream);
+  --color-cream-dark: var(--cream-dark);
+  --color-cream-mid: var(--cream-mid);
+  --color-stone: var(--stone);
+  --color-stone-mid: var(--stone-mid);
+  --color-stone-light: var(--stone-light);
+  --color-amber: var(--amber);
+  --color-amber-light: var(--amber-light);
+  --color-sage: var(--sage);
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-serif: var(--font-playfair), Georgia, serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--cream);
+  color: var(--stone);
+  font-family: var(--font-sans);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: var(--amber-pale);
+  color: var(--stone);
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.section-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--stone-light);
 }
