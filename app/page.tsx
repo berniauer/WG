@@ -26,7 +26,7 @@ const photoSlots = [
   { title: 'Dein Zimmer', detail: '15,11 m² · Parkett · hell', src: '/photos/zimmer-1.webp' },
   { title: 'Zimmer Blick 2', detail: 'Platz für Bett, Tisch und Kasten', src: '/photos/zimmer-2.webp' },
   { title: 'Küche', detail: 'gemeinsam · voll ausgestattet', src: '/photos/kueche.webp' },
-  { title: 'Bad', detail: 'Badewanne · WC separat', src: '/photos/bad.webp' },
+  { title: 'Bad', detail: 'Bad · WC separat', src: '/photos/bad.webp' },
   { title: 'Zimmer Blick 3', detail: 'weitere Perspektive', src: '/photos/zimmer-3.webp' },
   { title: 'Zimmer Blick 4', detail: 'weitere Perspektive', src: '/photos/zimmer-4.webp' },
 ]
@@ -89,6 +89,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-3 mt-7">
               <a
                 href="#fotos"
+                data-umami-event="hero-photos-click"
                 className="inline-flex min-h-12 items-center justify-center gap-2 px-5 py-3 rounded-full text-sm font-semibold transition-opacity hover:opacity-85"
                 style={{ background: '#1C1917', color: '#F5EFE6', textDecoration: 'none' }}
               >
@@ -97,6 +98,7 @@ export default function Home() {
               </a>
               <a
                 href="#kontakt"
+                data-umami-event="hero-contact-click"
                 className="inline-flex min-h-12 items-center justify-center gap-2 px-5 py-3 rounded-full text-sm font-semibold transition-opacity hover:opacity-85"
                 style={{ background: '#EDE8DF', color: '#1C1917', border: '1px solid #C8BFB5', textDecoration: 'none' }}
               >
@@ -155,8 +157,8 @@ export default function Home() {
               </h2>
             </div>
             <p className="text-sm max-w-sm leading-relaxed" style={{ color: '#78716C' }}>
-              Die Fotos sind für mobile Nutzung optimiert und werden erst geladen, wenn sie beim
-              Scrollen gebraucht werden. So bleibt die Seite auch über geteilte Links schnell.
+              Schau dir das freie Zimmer und die gemeinsam genutzten Räume an. Die wichtigsten
+              Eindrücke sind direkt hier gesammelt.
             </p>
           </div>
 
@@ -194,17 +196,6 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="mt-5 flex flex-wrap gap-2">
-            {['echte Fotos', 'lazy loading', 'WebP optimiert', 'Zimmer zuerst'].map((label) => (
-              <span
-                key={label}
-                className="text-xs px-3 py-2 rounded-full"
-                style={{ background: '#F5EFE6', color: '#78716C', border: '1px solid #C8BFB5' }}
-              >
-                {label}
-              </span>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -460,6 +451,7 @@ export default function Home() {
 
           <a
             href="mailto:auer_bernhard@outlook.com?subject=WG%20Graz%20-%20Zimmer%20anfrage"
+            data-umami-event="contact-email-click"
             className="inline-flex items-center gap-3 px-8 py-4 rounded-full text-base font-semibold transition-all hover:opacity-90 hover:scale-[1.02]"
             style={{ background: '#1C1917', color: '#F5EFE6', textDecoration: 'none' }}
           >
@@ -489,6 +481,7 @@ export default function Home() {
                 href={googleMapsUrl}
                 target="_blank"
                 rel="noreferrer"
+                data-umami-event="google-maps-click"
                 className="inline-flex min-h-12 items-center justify-center gap-2 px-4 py-3 rounded-full text-sm font-semibold transition-opacity hover:opacity-85"
                 style={{ background: '#1C1917', color: '#F5EFE6', textDecoration: 'none' }}
               >
@@ -498,6 +491,7 @@ export default function Home() {
                 href={appleMapsUrl}
                 target="_blank"
                 rel="noreferrer"
+                data-umami-event="apple-maps-click"
                 className="inline-flex min-h-12 items-center justify-center gap-2 px-4 py-3 rounded-full text-sm font-semibold transition-opacity hover:opacity-85"
                 style={{ background: '#F5EFE6', color: '#1C1917', border: '1px solid #C8BFB5', textDecoration: 'none' }}
               >
@@ -520,6 +514,7 @@ export default function Home() {
       >
         <a
           href="#kontakt"
+          data-umami-event="sticky-contact-click"
           className="flex min-h-12 items-center justify-center gap-2 rounded-full text-sm font-semibold"
           style={{ background: '#1C1917', color: '#F5EFE6', textDecoration: 'none' }}
         >

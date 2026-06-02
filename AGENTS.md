@@ -37,3 +37,14 @@ Image rules:
 - Render photos with `next/image`.
 - Use lazy loading for non-critical images.
 - Keep explicit aspect ratios or image dimensions to avoid layout shift.
+
+Analytics rules:
+
+- Umami is self-hosted at `https://analytics.auerlytics.at`.
+- Track the WG website domain `wg.auerlytics.at`.
+- Configure tracking through environment variables:
+  - `NEXT_PUBLIC_UMAMI_SCRIPT_URL=https://analytics.auerlytics.at/script.js`
+  - `NEXT_PUBLIC_UMAMI_WEBSITE_ID=<website-id-from-umami>`
+- These variables must be present at Docker build time because public Next.js variables are baked into browser output.
+- In Docker Compose, pass them through `build.args` and `environment`.
+- Track important outbound or intent clicks with `data-umami-event`, especially contact and maps clicks.

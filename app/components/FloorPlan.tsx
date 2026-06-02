@@ -126,8 +126,8 @@ const ROOMS: Room[] = [
     type: 'shared',
     // south of stub end (Badtür südlich), full right-column width, below Klo
     x: 526, y: 512, w: 142, h: 62,
-    info: 'Bad mit Terrazzoboden und Badewanne',
-    infoEn: 'Bathroom with terrazzo floor and bathtub',
+    info: 'Bad mit Terrazzoboden',
+    infoEn: 'Bathroom with terrazzo floor',
     floor: 'Terrazzo',
   },
 ]
