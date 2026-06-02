@@ -1,0 +1,19 @@
+services:
+  wg-website:
+    build: .
+    container_name: wg-website
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      HOSTNAME: 0.0.0.0
+      PORT: 3000
+    networks:
+      - webnet
+    # If the reverse proxy runs on the host instead of inside webnet,
+    # remove the networks block above and use this localhost-only port binding:
+    # ports:
+    #   - "127.0.0.1:8765:3000"
+
+networks:
+  webnet:
+    external: true

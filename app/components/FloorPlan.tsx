@@ -31,8 +31,8 @@ const ROOMS: Room[] = [
     area: 6.21,
     type: 'balkon',
     x: 12, y: 12, w: 240, h: 58,
-    info: 'Gemeinsamer Balkon – sonnige Seite',
-    infoEn: 'Shared balcony – sunny side',
+    info: 'Gemeinsamer Balkon, sonnige Seite',
+    infoEn: 'Shared balcony, sunny side',
   },
   {
     id: 'wohnzimmer',
@@ -40,10 +40,10 @@ const ROOMS: Room[] = [
     labelEn: 'Room',
     area: 25.79,
     type: 'private',
-    resident: 'Marv',
+    resident: 'Marvin',
     x: 12, y: 76, w: 360, h: 210,
-    info: 'Privatzimmer – Marv',
-    infoEn: 'Private room – Marv',
+    info: 'Privatzimmer: Marvin',
+    infoEn: 'Private room: Marvin',
     floor: 'Parkett',
   },
   {
@@ -63,8 +63,8 @@ const ROOMS: Room[] = [
     labelEn: 'Hallway',
     area: 16.14,
     type: 'shared',
-    // L-shape: wide (x=186–460, y=292–420) + narrow right (x=460–662, y=362–420)
-    // + short stub south (x=526–556, y=420–506): ends at Bad door (south), Klo door is east
+    // L-shape: wide (x=186-460, y=292-420) + narrow right (x=460-662, y=362-420)
+    // + short stub south (x=526-556, y=420-506): ends at Bad door (south), Klo door is east
     polygon: 'M 186,292 H 460 V 362 H 662 V 420 H 556 V 506 H 526 V 420 H 186 Z',
     x: 186, y: 292, w: 274, h: 128,
     labelX: 323,  // center of wide part
@@ -80,7 +80,7 @@ const ROOMS: Room[] = [
     area: 1.44,
     type: 'shared',
     x: 466, y: 292, w: 90, h: 64,
-    info: 'Abstellkammerl – Stauraum für alle',
+    info: 'Abstellkammerl: Stauraum für alle',
     infoEn: 'Storage room for everyone',
   },
   {
@@ -89,7 +89,7 @@ const ROOMS: Room[] = [
     labelEn: 'WC',
     area: 1.56,
     type: 'shared',
-    // east of stub (Klotür östlich), same height as stub — stacked above Bad
+    // east of stub (Klotür östlich), same height as stub, stacked above Bad
     x: 562, y: 426, w: 100, h: 80,
     info: 'Separates WC',
     infoEn: 'Separate toilet',
@@ -103,8 +103,8 @@ const ROOMS: Room[] = [
     type: 'private',
     resident: 'Berni',
     x: 12, y: 426, w: 268, h: 148,
-    info: 'Privatzimmer – Berni',
-    infoEn: 'Private room – Berni',
+    info: 'Privatzimmer: Berni',
+    infoEn: 'Private room: Berni',
     floor: 'Parkett',
   },
   {
@@ -114,8 +114,8 @@ const ROOMS: Room[] = [
     area: 15.11,
     type: 'offered',
     x: 286, y: 426, w: 234, h: 148,
-    info: 'Hell, ruhig, Parkettboden – ab sofort frei!',
-    infoEn: 'Bright, quiet, parquet floor – available now!',
+    info: 'Helles Zimmer mit Parkettboden, ab sofort frei!',
+    infoEn: 'Bright room with parquet floor, available now!',
     floor: 'Parkett',
   },
   {
@@ -124,7 +124,7 @@ const ROOMS: Room[] = [
     labelEn: 'Bathroom',
     area: 8.10,
     type: 'shared',
-    // south of stub end (Badtür südlich) — full right-column width, below Klo
+    // south of stub end (Badtür südlich), full right-column width, below Klo
     x: 526, y: 512, w: 142, h: 62,
     info: 'Bad mit Terrazzoboden und Badewanne',
     infoEn: 'Bathroom with terrazzo floor and bathtub',
@@ -365,7 +365,7 @@ export default function FloorPlan() {
                   >
                     <div className="flex justify-between">
                       <span>Miete kalt</span>
-                      <span className="font-medium">181,46 €</span>
+                      <span className="font-medium">190,10 €</span>
                     </div>
                     <div className="flex justify-between">
                       <span>BK + Heizung</span>
@@ -380,7 +380,7 @@ export default function FloorPlan() {
                       style={{ borderTop: '1px solid #C8BFB5', color: '#1C1917' }}
                     >
                       <span>Gesamt</span>
-                      <span style={{ color: '#B45309' }}>396,00 €</span>
+                      <span style={{ color: '#B45309' }}>404,64 €</span>
                     </div>
                   </div>
                   <a

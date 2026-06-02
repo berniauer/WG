@@ -15,9 +15,9 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "WG Wien – Zimmer frei | 15 m², Parkett, 396 €/Mo",
+  title: "WG Graz - Zimmer frei | 15 m², Parkett, 405 €/Mo",
   description:
-    "Wir suchen eine neue Mitbewohnerin / einen neuen Mitbewohner für unsere 3er-WG in Wien. 15,11 m², Parkettboden, ruhig und hell. Gesamtkosten 396 €/Monat all-in.",
+    "Wir suchen eine neue Mitbewohnerin / einen neuen Mitbewohner für unsere 3er-WG in Graz. Bergmanngasse 45/5, 15,11 m², Parkettboden, 2. OG, Balkon und 404,64 €/Monat all-in.",
 };
 
 export default function RootLayout({
