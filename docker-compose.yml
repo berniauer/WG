@@ -4,7 +4,7 @@ services:
       context: .
       args:
         NEXT_PUBLIC_UMAMI_SCRIPT_URL: ${NEXT_PUBLIC_UMAMI_SCRIPT_URL:-https://analytics.auerlytics.at/script.js}
-        NEXT_PUBLIC_UMAMI_WEBSITE_ID: ${NEXT_PUBLIC_UMAMI_WEBSITE_ID:-}
+        NEXT_PUBLIC_UMAMI_WEBSITE_ID: ${NEXT_PUBLIC_UMAMI_WEBSITE_ID:-bacc3661-3fcd-469e-80c5-5893280f766e}
     container_name: wg-website
     restart: unless-stopped
     environment:
@@ -12,7 +12,7 @@ services:
       HOSTNAME: 0.0.0.0
       PORT: 3000
       NEXT_PUBLIC_UMAMI_SCRIPT_URL: ${NEXT_PUBLIC_UMAMI_SCRIPT_URL:-https://analytics.auerlytics.at/script.js}
-      NEXT_PUBLIC_UMAMI_WEBSITE_ID: ${NEXT_PUBLIC_UMAMI_WEBSITE_ID:-}
+      NEXT_PUBLIC_UMAMI_WEBSITE_ID: ${NEXT_PUBLIC_UMAMI_WEBSITE_ID:-bacc3661-3fcd-469e-80c5-5893280f766e}
     networks:
       - webnet
     # If the reverse proxy runs on the host instead of inside webnet,
